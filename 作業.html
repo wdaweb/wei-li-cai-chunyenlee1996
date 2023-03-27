@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //將兩個 prompt()輸入的數字相加顯示在網頁上，如果不是跳出錯誤訊息
+        //const num = () =>{
+        //    if(isNaN(number1)===true||isNaN(number2===true)){
+        //        alert('error')
+        //        return 
+        //    }else{
+        //        number1+=number2
+        //        document.write(number1)
+        //    }
+        //}
+        //let number1 = parseInt(prompt('請輸入第一個數字'))
+        //let number2 = parseInt(prompt('請輸入第二個數字'))
+        //num()
+
+        //製作凱薩密碼 (Caesar Cipher) 加密工具
+        //const manufacture = () =>{
+        //    let a = 0
+        //    text.trim()
+        //    text.toLowerCase()
+        //    for(let i =0;i<text.length;i++){
+        //        text.charCodeAt(i)
+        //        console.log(text.charCodeAt(i))
+        //        a = text.charCodeAt(i)
+        //        if(key>26){
+        //            key%26
+        //        }
+        //        if(a!==32){
+        //           a += key 
+        //        }
+        //        if(a>122){
+        //            a -= 26
+        //        }
+        //        
+        //        document.write(String.fromCharCode(a).toUpperCase())
+        //    }
+        //
+        //}
+        //let text = prompt('請先輸入明文')
+        //let key = parseInt(prompt('請輸入數字密鑰'))
+        //document.write('<table border="1">')
+        //    document.write(`<tr><td>你輸入的密鑰是</td><td>${key}</td></tr>`)
+        //    document.write(`<tr><td>你輸入的明文是</td><td>${text}</td></tr>`)
+        //    document.write(`<tr><td>轉譯結果是</td><td></td></tr>`)
+        //        document.write('</table>')
+        //        manufacture()
+
+        //想想看怎麼從 0 到 100 隨機取一個整數?
+        //document.write(Math.round(Math.random()*100))
+
+        //製作隨機數字 function，提供最小整數和最大整數，回傳一個區間內的隨機整數
+        //const rand = (min, max) => {
+        //    document.write(Math.round(Math.random()*(max-min)+min))
+        //}
+        //let min = parseInt(prompt(`請輸入期望最小整數`))
+        //let max = parseInt(prompt('請輸入期望最大整數'))
+        //rand(min, max)
+
+        //質數、合數
+        //    document.write(`2<br>`)
+        //    for(let i = 3; i<=100 ; i++){
+        //        for(let j = 2 ;j<i ;j++){
+        //            if(i%j!==0){
+        //                if(i==j+1){
+        //                    document.write(`${i}<br>`)
+        //                }    
+        //            }else{
+        //                break
+        //            }
+        //            }
+        //        }
+        //    
+        //const f = (num) => {
+        //    if(num==2){
+        //        document.write(`您輸入的數字${num}為質數`)
+        //    }else if(num!==2){
+        //        for(let i = 2;i<num;i++){
+        //            if(num%i!==0){
+        //                if(i+1==num){
+        //                    document.write(`您輸入的數字${num}為質數`)
+        //                }
+        //            }else{
+        //                break
+        //            }
+        //        }
+        //    }
+        //    for(let i = 2;i<num;i++){
+        //        if(num%i==0){
+        //            document.write(`您輸入的數字${num}為合數`)
+        //            break
+        //        }
+        //    }
+        //}
+        //    
+        //let num = parseInt(prompt('請輸入一個數字'))
+        //f(num)
+
+        //威利彩
+        const rand = (min, max) =>{
+            return(Math.round(Math.random()*(max-min)+min))
+        }
+        let arr=[]
+        let random = rand(1,38)
+
+        for(let i = 1;i<=6;i++){
+            arr.push(random)
+            while(arr.includes(random)){
+                random=rand(1,38)
+            }
+        }
+        document.write(`A區為${arr}, B區為${rand(1,8)}`)
+
+    </script>
+</body>
+</html>
